@@ -1,0 +1,25 @@
+<div class="page-header">
+  <div class="page-header-logo">
+    <h2>Logo</h2>
+  </div>
+  <div>
+    <div class="page-header-nav">
+      <a
+        routerLink="Home"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >HOME</a
+      >
+      <a
+        routerLink="Courses"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >COURSES</a
+      >
+    </div>
+  </div>
+  <div class="page-header-login-logout">
+    <a routerLink="/Login">Log In</a>
+    <a routerLink="/Login" [queryParams]="{ logout: true }">Log Out</a>
+  </div>
+</div>
