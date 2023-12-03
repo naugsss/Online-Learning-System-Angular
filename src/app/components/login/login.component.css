@@ -63,7 +63,8 @@ select {
   padding: 32px;
 }
 
-.no-account {
+.no-account > a {
   margin-top: 0px;
   color: #47a5c5;
+  text-decoration: none;
 }

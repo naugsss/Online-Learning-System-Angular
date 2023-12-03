@@ -2,14 +2,16 @@
   <div class="signup">
     <div class="signup-form">
       <h2>Welcome Back</h2>
-      <form class="form-group">
-        <div>
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="form-group">
           <label for="username">Enter a username</label>
           <input
             class="form-style"
             type="text"
             placeholder="Enter a username"
             id="username"
+            name="username"
+            ngModel
           />
         </div>
 
@@ -20,6 +22,8 @@
             placeholder="Enter password"
             id="password"
             class="form-style"
+            name="password"
+            ngModel
           />
         </div>
 
@@ -27,7 +31,10 @@
           <input type="submit" value="Log In" class="btn" />
         </div>
         <div>
-          <p>Don't have a account?? <span class="no-account">Sign Up</span></p>
+          <p>
+            Don't have a account??
+            <span class="no-account"><a routerLink="/signup">Sign Up</a></span>
+          </p>
         </div>
       </form>
     </div>
